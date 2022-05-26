@@ -2,21 +2,22 @@ version: '3'
 services:
   aztf:
     build:
-      context: https://github.com/microsoft/vscode-dev-containers.git#main:containers/azure-terraform/.devcontainer
+      context: infra/.devcontainer
       dockerfile: Dockerfile
       args:
-      - TERRAFORM_VERSION=0.14.5
-      - TFLINT_VERSION=0.24.1
-      - TERRAGRUNT_VERSION=0.28.1
-      - INSTALL_AZURE_CLI=true
-      - INSTALL_DOCKER=true
-      - NODE_VERSION=lts/*
+        - TERRAFORM_VERSION=1.1.9
+        - TFLINT_VERSION=0.36.2
+        - TERRAGRUNT_VERSION=0.36.0
+        - INSTALL_AZURE_CLI=true
+        - INSTALL_DOCKER=false
+        - NODE_VERSION=16
+        - UPGRADE_PACKAGES=true
     volumes:      
       - /var/run/docker.sock:/var/run/docker-host.sock:bind
       # Mount the root folder that contains .git
       - .:/workspace:cached
     env_file:
-      - ./infra/devcontainer.env
+      - devcontainer.env
 
 #  container-2:
 #    image: ubuntu:bionic

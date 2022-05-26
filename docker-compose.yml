@@ -17,7 +17,7 @@ services:
       # Mount the root folder that contains .git
       - .:/workspace:cached
     env_file:
-      - devcontainer.env
+      - infra/.devcontainer/devcontainer.env
 
 #  container-2:
 #    image: ubuntu:bionic

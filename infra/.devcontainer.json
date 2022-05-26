@@ -2,7 +2,7 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.234.0/containers/azure-terraform
 {
 	"name": "Azure Terraform (Community)",
-	"dockerComposeFile": ["../../docker-compose.yml"],
+	"dockerComposeFile": ["../docker-compose.yml"],
     "service": "aztf",
     "shutdownAction": "none",
     "remoteEnv": {

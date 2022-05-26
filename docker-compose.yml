@@ -2,7 +2,7 @@ version: '3'
 services:
   aztf:
     build:
-      context: https://github.com/microsoft/vscode-dev-containers#main:containers/azure-terraform/.devcontainer
+      context: https://github.com/microsoft/vscode-dev-containers.git#main:containers/azure-terraform/.devcontainer
       dockerfile: Dockerfile
       args:
       - TERRAFORM_VERSION=0.14.5

@@ -1,0 +1,89 @@
+name: Slides
+
+permissions:
+      id-token: write
+      contents: read
+      issues: write
+      pull-requests: write
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/slides.yml
+      - slides/**
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/slides.yml
+      - slides/**
+
+jobs:
+  publish-slides:
+    name: "Publish slides"
+    runs-on: ubuntu-latest
+    env:
+      STORAGE_ACCOUNT_NAME: stslideseiv22
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: 'Az CLI login'
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.ARM_CLIENT_ID }}
+          tenant-id: ${{ secrets.ARM_TENANT_ID }}
+          subscription-id: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+
+      - name: Upload Dry Run
+        id: dryrun
+        if: github.event_name == 'pull_request'
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+              echo 'DRY_RUN<<EOF' >> $GITHUB_ENV
+              az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides --dryrun >> $GITHUB_ENV
+              echo 'EOF' >> $GITHUB_ENV
+        continue-on-error: true
+
+      - uses: actions/github-script@v6
+        if: github.event_name == 'pull_request'
+        env:
+          DRYRUN: "az storage blob upload-batch\n${{ env.DRY_RUN }}"
+        continue-on-error: true
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const output = `#### Blob Container Upload ⬆️📁 \`${{ steps.dryrun.outcome }}\`
+
+            <details><summary>Show Dry Run</summary>
+
+            \`\`\`\n
+            ${process.env.DRYRUN}
+            \`\`\`
+
+            </details>
+
+            *Pushed by: @${{ github.actor }}, Action: \`${{ github.event_name }}\`*`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: output
+            })
+
+      - name: Blob Upload Status
+        if: steps.dryrun.outcome == 'failure'
+        run: exit 1
+
+      - name: Upload to blob storage
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+              az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides
+              echo 'Static website URL:'
+              az storage account show -n <storage-account-name> --query "primaryEndpoints.web" --output tsv

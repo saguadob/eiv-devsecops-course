@@ -1,7 +1,11 @@
 # You can pick any Debian/Ubuntu-based image. 😊
 FROM mcr.microsoft.com/vscode/devcontainers/base:0-bullseye
 
+RUN apt-get update
+RUN apt-get install dos2unix
+
 COPY library-scripts/*.sh /tmp/library-scripts/
+RUN find /tmp/library-scripts/ -type f -print0 | xargs -0 dos2unix
 
 # [Option] Install zsh
 ARG INSTALL_ZSH="true"
@@ -12,7 +16,7 @@ ARG UPGRADE_PACKAGES="false"
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+RUN export DEBIAN_FRONTEND=noninteractive \
     && bash /tmp/library-scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "${USER_UID}" "${USER_GID}" "${UPGRADE_PACKAGES}" "true" "true" \ 
     && apt-get install -y graphviz \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*

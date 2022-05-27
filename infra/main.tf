@@ -24,7 +24,6 @@ provider "azurerm" {
   use_oidc = true
   # subscription_id = Configured in TF Cloud Env Vars.
   # client_id       = Configured in TF Cloud Env Vars.
-  # client_secret   = Configured in TF Cloud Env Vars.
   # tenant_id       = Configured in TF Cloud Env Vars.
   features {}
 }

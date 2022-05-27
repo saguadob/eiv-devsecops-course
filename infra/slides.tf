@@ -25,3 +25,10 @@ resource "azurerm_storage_account" "slides" {
     index_document = "index.html"
   }
 }
+
+resource "azurerm_role_assignment" "slides_data_owner" {
+  scope                = azurerm_storage_account.slides.id
+  role_definition_name = "Storage Blob Data Contributor"
+  principal_id         = data.azurerm_client_config.current.object_id
+  description          = "CI/CD automation data contributor role assignment"
+}

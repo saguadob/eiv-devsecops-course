@@ -27,3 +27,6 @@ provider "azurerm" {
   # tenant_id       = Configured in TF Cloud Env Vars.
   features {}
 }
+
+data "azurerm_client_config" "current" {
+}

@@ -43,18 +43,20 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-              az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides --dryrun 
+              echo 'DRY_RUN<<EOF' >> $GITHUB_ENV
+              az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides --dryrun >> $GITHUB_ENV
+              echo 'EOF' >> $GITHUB_ENV
         continue-on-error: true
       
       - uses: actions/github-script@v6
         if: github.event_name == 'pull_request'
         env:
-          DRYRUN: "az storage blob upload-batch\n${{ steps.dryrun.outputs.stdout }}"
+          DRYRUN: "az storage blob upload-batch\n${{ env.DRY_RUN }}"
         continue-on-error: true
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const output = `####Blob Container Upload ⬆️📁\`${{ steps.dryrun.outcome }}\`
+            const output = `#### Blob Container Upload ⬆️📁 \`${{ steps.dryrun.outcome }}\`
 
             <details><summary>Show Dry Run</summary>
 

@@ -1,0 +1,28 @@
+version: '3'
+services:
+  aztf:
+    build:
+      context: infra/.devcontainer
+      dockerfile: Dockerfile
+      args:
+        - TERRAFORM_VERSION=1.1.9
+        - TFLINT_VERSION=0.36.2
+        - TERRAGRUNT_VERSION=0.36.0
+        - INSTALL_AZURE_CLI=true
+        - INSTALL_DOCKER=false
+        - NODE_VERSION=16
+        - UPGRADE_PACKAGES=true
+    volumes:      
+      - /var/run/docker.sock:/var/run/docker-host.sock:bind
+      # Mount the root folder that contains .git
+      - .:/workspace:cached
+    env_file:
+      - infra/.devcontainer/devcontainer.env
+
+#  container-2:
+#    image: ubuntu:bionic
+#    volumes:
+#      # Mount the root folder that contains .git
+#      - .:/workspace:cached
+#    command: /bin/sh -c "while sleep 1000; do :; done"
+#    # ...

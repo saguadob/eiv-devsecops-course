@@ -20,7 +20,8 @@ terraform {
 }
 
 provider "azurerm" {
-  use_msi = false
+  use_msi  = false
+  use_oidc = true
   # subscription_id = Configured in TF Cloud Env Vars.
   # client_id       = Configured in TF Cloud Env Vars.
   # client_secret   = Configured in TF Cloud Env Vars.

@@ -3,6 +3,7 @@ name: "Terraform"
 permissions:
       id-token: write
       contents: read
+      issues: write
 
 on:
   push:

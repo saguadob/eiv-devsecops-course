@@ -47,7 +47,7 @@ jobs:
               az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides --dryrun >> $GITHUB_ENV
               echo 'EOF' >> $GITHUB_ENV
         continue-on-error: true
-      
+
       - uses: actions/github-script@v6
         if: github.event_name == 'pull_request'
         env:
@@ -85,6 +85,5 @@ jobs:
         with:
           inlineScript: |
               az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides
-        
-      
-        
+              echo 'Static website URL:'
+              az storage account show -n <storage-account-name> --query "primaryEndpoints.web" --output tsv

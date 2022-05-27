@@ -14,7 +14,7 @@ on:
       - .github/workflows/infra.yml
       - infra/**
   pull_request:
-     branches:
+    branches:
       - main
     paths:
       - .github/workflows/infra.yml

@@ -6,7 +6,7 @@ terraform {
       name = "infra"
     }
   }
-  
+
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"

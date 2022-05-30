@@ -46,6 +46,7 @@ jobs:
               echo 'DRY_RUN<<EOF' >> $GITHUB_ENV
               az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides --dryrun >> $GITHUB_ENV
               echo 'EOF' >> $GITHUB_ENV
+              echo ${{ env.DRY_RUN }}
         continue-on-error: true
 
       - uses: actions/github-script@v6
@@ -86,4 +87,4 @@ jobs:
           inlineScript: |
               az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides
               echo 'Static website URL:'
-              az storage account show -n <storage-account-name> --query "primaryEndpoints.web" --output tsv
+              az storage account show -n $STORAGE_ACCOUNT_NAME --query "primaryEndpoints.web" --output tsv

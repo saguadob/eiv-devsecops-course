@@ -60,7 +60,7 @@ jobs:
           script: |
             const output = `#### Blob Container Upload ⬆️📁 \`${{ steps.dryrun.outcome }}\`
 
-            <details><summary>Show `az storage blob upload-batch` Dry Run</summary>
+            <details><summary>Show \`az storage blob upload-batch\` Dry Run</summary>
 
             \`\`\`json\n
             ${process.env.DRYRUN}

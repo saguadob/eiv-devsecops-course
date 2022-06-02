@@ -26,6 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       STORAGE_ACCOUNT_NAME: stslideseiv22
+      SRC_FOLDER: slides/src
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -44,7 +45,7 @@ jobs:
         with:
           inlineScript: |
               echo 'DRY_RUN<<EOF' >> $GITHUB_ENV
-              az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides --dryrun >> $GITHUB_ENV
+              az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s $SRC_FOLDER --overwrite --dryrun >> $GITHUB_ENV
               echo 'EOF' >> $GITHUB_ENV
               echo ${{ env.DRY_RUN }}
         continue-on-error: true
@@ -52,16 +53,16 @@ jobs:
       - uses: actions/github-script@v6
         if: github.event_name == 'pull_request'
         env:
-          DRYRUN: "az storage blob upload-batch\n${{ env.DRY_RUN }}"
+          DRYRUN: "${{ env.DRY_RUN }}"
         continue-on-error: true
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const output = `#### Blob Container Upload ⬆️📁 \`${{ steps.dryrun.outcome }}\`
 
-            <details><summary>Show Dry Run</summary>
+            <details><summary>Show \`az storage blob upload-batch\` Dry Run</summary>
 
-            \`\`\`\n
+            \`\`\`json\n
             ${process.env.DRYRUN}
             \`\`\`
 
@@ -85,6 +86,6 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-              az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides
+              az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s $SRC_FOLDER --overwrite
               echo 'Static website URL:'
               az storage account show -n $STORAGE_ACCOUNT_NAME --query "primaryEndpoints.web" --output tsv

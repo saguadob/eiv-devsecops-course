@@ -12,17 +12,20 @@ services:
         - INSTALL_DOCKER=false
         - NODE_VERSION=16
         - UPGRADE_PACKAGES=true
-    volumes:      
+    volumes:
       - /var/run/docker.sock:/var/run/docker-host.sock:bind
       # Mount the root folder that contains .git
       - .:/workspace:cached
     env_file:
       - infra/.devcontainer/devcontainer.env
 
-#  container-2:
-#    image: ubuntu:bionic
-#    volumes:
-#      # Mount the root folder that contains .git
-#      - .:/workspace:cached
-#    command: /bin/sh -c "while sleep 1000; do :; done"
+  slides-static-website:
+    image: mcr.microsoft.com/vscode/devcontainers/jekyll:2.7-bullseye
+    volumes:
+      # Mount the root folder that contains .git
+      - .:/workspace:cached
+    ports:
+      - 4000
+      - 35729
+    command: jekyll serve --source /workspace/slides/src
 #    # ...

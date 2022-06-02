@@ -85,6 +85,6 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-              az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides
+              az storage blob upload-batch --account-name $STORAGE_ACCOUNT_NAME --auth-mode login -d '$web' -s slides/src
               echo 'Static website URL:'
               az storage account show -n $STORAGE_ACCOUNT_NAME --query "primaryEndpoints.web" --output tsv

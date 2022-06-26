@@ -27,5 +27,4 @@ services:
     ports:
       - 4000
       - 35729
-    command: jekyll serve --source /workspace/slides/src
-#    # ...
+    command: jekyll serve --source /workspace/slides/src --force_polling --livereload

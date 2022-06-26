@@ -16,7 +16,7 @@ class: center, middle
 
 4. Protección en la cadena de suministros (Supply Chain Protections) 
 
-5. 
+5. Banana 🍌
 
 ---
 

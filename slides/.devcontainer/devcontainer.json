@@ -2,18 +2,16 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.234.0/containers/azure-terraform
 {
 	"name": "Jekyll",
-	"dockerComposeFile": ["../../docker-compose.yml"],
-    "service": "slides-static-website",
-    "shutdownAction": "none",
-    
-	"settings": { 		
-	},
-
+	"dockerComposeFile": [
+		"../../docker-compose.yml"
+	],
+	"service": "slides-static-website",
+	"shutdownAction": "none",
+	"settings": {},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"GitHub.vscode-pull-request-github"
 	],
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
 		// Jekyll server
@@ -21,12 +19,10 @@
 		// Live reload server
 		35729
 	],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "sh /workspace/slides/.devcontainer/post-create.sh",
-
+	"postCreateCommand": "sh /workspace/slides/.devcontainer/post-create.sh",
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
 	// Open the sub-folder with the source code
-    "workspaceFolder": "/workspace/slides"
+	"workspaceFolder": "/workspace/slides"
 }

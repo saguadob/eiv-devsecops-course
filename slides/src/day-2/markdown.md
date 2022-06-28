@@ -13,8 +13,8 @@ class: center, middle
 3. Detección activa de vulnerabilidades (Vulnerability detection)
 4. Protección en la cadena de suministros (Supply Chain Protections)
 5. Cómo mitigar todas de las anteriores
-6. Cultura laboral
-7. Secure Development (Desarrollo seguro) + Threat modelling (Modelo de amenazas)
+6. Secure Development (Desarrollo seguro) + Threat modelling (Modelo de amenazas)
+7. Cultura laboral
 
 ---
 
@@ -77,7 +77,7 @@ Hay principalmente dos:
 
 Pero ¿cómo funcionan?
 
-La respuesta es OWASP
+La respuesta es [OWASP](https://owasp.org/)
 
 --
 
@@ -86,3 +86,92 @@ La respuesta es OWASP
 --
 
 (Perdón, no había emoji de avispa)
+
+---
+
+# Static Code Analysis
+
+## OWASP
+
+- **O**pen **W**eb **A**pplication **S**ecurity **P**roject 🐝
+- Hacen: Application Security Research
+    - Catalogar, documentar y transmitir información para entender y prevenir vulnerabilidades
+- The good guys 🦸‍♀️🦸‍♂️🦸
+- [OWASP TOP 10](https://owasp.org/Top10/)
+
+---
+
+# Static Code Analysis
+
+## Anatomía de una vulnerabilidad
+
+- Common Weakness Enumeration: **CWE**
+  - Catalogar "debilidades"
+  - Ejemplo: _CWE-787: Out-of-bounds Write_
+
+--
+
+- Common Vulnerabilities and Exposures: **CVE**
+  - Catalogar Vulnerabilidades específicas
+  - Ejemplo: _CVE-2021-35212: An SQL injection Privilege Escalation Vulnerability was discovered in the Orion Platform reported by the ZDI Team_
+
+--
+
+- Common Vulnerability Scoring System **CVSS**
+  - 0 a 10. None (0), Low (0.1-3.9), Mid (4.0-6.9), High (7.0-8.9), Critical (9.0-10.0)
+  - Puntaje del impacto de una vulnerabilidad 😱 basado en multiples factores
+  - Ejemplo: _CVE-2021-35212 tiene un puntaje de 9.0_
+
+---
+
+# Cumplimiento de Normativas de Seguridad (Security Compliance Checks)
+
+> Cómo todo en la ingeniería...
+
+--
+
+_DEPENDE_
+
+--
+
+Las empresas tienen sus propios sistemas de compliance
+
+Suelen ser basados en la industria a la que pertenecen (bancaria, industrial, servicios, etc.)
+
+---
+
+# Security Compliance Checks
+
+En el caso de DevOps pueden ser políticas cómo:
+
+--
+
+- Taggear rescuros apropiadamente
+
+--
+
+- Mantener imágenes de contenedores sin vulnerabilidades
+
+--
+
+- prevenir automáticamente el uso de paquetes con vulnerabilidades
+
+--
+
+- Multi Facot authenticatioin para dispositivos
+
+--
+
+- Encipción de bases de datos
+
+--
+
+- Entrenamientos
+
+--
+
+- Políticas de "4+ eyes principle"
+
+--
+
+- ETC...

@@ -28,3 +28,17 @@ services:
       - 4000
       - 35729
     command: jekyll serve --source /workspace/slides/src --force_polling --livereload
+  
+  app-development:
+    build:
+      context: app/.devcontainer
+      dockerfile: Dockerfile
+      args:
+        - VARIANT=6.0-bullseye-slim
+        - NODE_VERSION=lts/*
+    volumes:
+      - /var/run/docker.sock:/var/run/docker-host.sock:bind
+      # Mount the root folder that contains .git
+      - .:/workspace:cached
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"

@@ -185,3 +185,21 @@ DEV
   - Cómo compilar
   - Cómo correr local
 ---
+.left-column[
+# DEV
+]
+.right-column[
+## Entornos de desarrollo efímeros
+- El problema de "_funciona en mi PC_"
+- Alternativas para replicación
+  - Scripts
+  - Docker y Dev Containers
+  - Virtual Environments
+- Entorno local de pruebas
+]
+
+???
+# 5 min y 10 laboratios
+- Hablar de arquitecturas que facilitan lo anterior.
+- Ejemplo de una app movil preguntar
+---

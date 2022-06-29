@@ -167,8 +167,21 @@ DEV
 ]
 .right-column[
 # Cómo contribuir al código fuente?
+- Qué es el archivo README?
+- Qué es importante tener en un archivo readme.md
+- Otra información relevante
+  - Guía de contribución y _Code of Conduct_
+  - Estado de CI
+  - Contactos, changelog, codeowners
 ]
 
 ???
 # 5 min
+- https://github.com/hashicorp/terraform/blob/main/README.md
+- Guía de contribución en este link: https://github.com/hashicorp/terraform/blob/main/.github/CONTRIBUTING.md
+## TODO
+- Modificar readme que refleje lo importante.
+  - Herramientas
+  - Cómo compilar
+  - Cómo correr local
 ---

@@ -11,7 +11,7 @@ class: center, middle
 1. Análisis estático de Código Fuente (Static Analysis)
 2. Cumplimiento de normativas de Seguridad (Security Compliance checks)
 3. Detección activa de vulnerabilidades (Vulnerability detection)
-4. Protección en la cadena de suministros (Supply Chain Protections)
+4. Protección en la cadena de suministros (Software Supply Chain Securitys)
 5. Cómo mitigar todas de las anteriores
 6. Secure Development (Desarrollo seguro) + Threat modelling (Modelo de amenazas)
 7. Cultura laboral
@@ -25,6 +25,10 @@ Es como un `linter`
 --
 
 pero mas sabroso 🌮
+
+--
+
+A veces conocidos como Static Application Security Testing (SAST)
 
 ---
 
@@ -56,7 +60,7 @@ Hay principalmente dos:
 
 - [SonarLint](https://www.sonarlint.org/vscode)
 
-  .img-75[![Sonar](https://sonarcloud.io//images/marketing/sonarlint-presentation/detect-issue.png)]
+  .img-75[![Sonar](../img/detect-issue.png)]
 
 
 ---
@@ -67,7 +71,7 @@ Hay principalmente dos:
 
 - [SonarQ](https://sonarcloud.io/)
 
-  .img-50[![Sonar](https://sonarcloud.io/images/marketing/features/risk-analysis.png)]
+  .img-50[![Sonar](../img/risk-analysis.png)]
 
 - [GitHub CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning)
 
@@ -175,3 +179,66 @@ En el caso de DevOps pueden ser políticas cómo:
 --
 
 - ETC...
+
+---
+
+# Detección activa de vulnerabilidades (Vulnerability detection)
+
+AKA Dynamic Application Security Testing (DAST)
+
+--
+
+Escaneo de aplicación _EN RUNTIME_
+
+--
+
+Básicamente, simular `H4X0RZ`
+
+![hacker](../img/haxor.gif)
+
+---
+
+# Detección activa de vulnerabilidades (Vulnerability detection)
+
+Se puede automatizar cómo lost SAST
+
+[Listado de DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) por el OWASP
+
+---
+
+# Detección activa de vulnerabilidades (Vulnerability detection)
+
+## Ejemplo
+
+[AppScan](https://www.hcltechsw.com/appscan)
+
+<div style = "display: flex; justify-content: space-around; width: 100%">
+    <img style = "height: 250px;" src = "../img/workbench.gif">
+    <img style = "height: 250px;" src = "../img/maxresdefault.jpeg">
+</div>
+
+---
+
+# Detección activa de vulnerabilidades (Vulnerability detection)
+
+## Pen-Testing
+
+Son herramientas útiles pero dependen de la aplicación. 
+
+Para mejores resultados es más comun utilizar Penentration Testing (o Pen-Testing)
+
+--
+
+Personal especializado en explotación de vulnerabilidades. En otras palabras, hackers pagados.
+
+.img-50[![test](../img/pentester-1.jpeg)]
+
+---
+
+# Protección en la cadena de suministros (Software Supply Chain Security)
+
+- Asegurar los paquetes que se utilizan al crear y desplegar aplicaciones
+
+---
+
+# Software Supply Chain Security

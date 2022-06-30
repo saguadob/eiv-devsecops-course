@@ -34,7 +34,7 @@ services:
       context: app/.devcontainer
       dockerfile: Dockerfile
       args:
-        - VARIANT=6.0-bullseye-slim
+        - VARIANT=3.1-bullseye
         - NODE_VERSION=lts/*
     volumes:
       - /var/run/docker.sock:/var/run/docker-host.sock:bind

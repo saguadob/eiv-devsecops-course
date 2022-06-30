@@ -203,3 +203,128 @@ DEV
 - Hablar de arquitecturas que facilitan lo anterior.
 - Ejemplo de una app movil preguntar
 ---
+.left-column[
+# DEV
+]
+.right-column[
+# A trabajar!
+## Greenfield
+- Consideraciones
+- La importacia de _templating_
+- Es común con:
+  - Bibliotecas
+  - Microservicsio
+## Brownfield
+- *Importante*: Es mala practica contribuir directamente en _trunk_
+- Hay diferentes actividades en el ciclo de desarrollo
+  - Bugfix
+  - Hotfix
+  - Release
+- Introducción de los _flujos_ de colaboración
+]
+
+???
+# 5 - 10 min
+- Consideraciones: Que es el desafio de un bootstrap
+---
+.left-column[
+# DEV
+]
+.right-column[
+## Gitflow
+.center[[![:scale 50%](../img/dia1_gitflow.png)]](https://nvie.com/posts/a-successful-git-branching-model/)
+]
+
+???
+#20 mins
+- Explicar toda la historia
+- PROS:
+  - Funciona bien en un monorepo
+  - Buena opción para ciclos de desarrollo largo (no recomendable )
+- CONS:
+  - Mucha disciplina para escoger el flujo correcto
+  - En multiples repositorios no es sostenible.
+  - Experiencia en Kredinor.
+---
+.left-column[
+# DEV
+]
+.right-column[
+## Github flow
+.center[![:scale 100%](../img/dia1_ghflow.webp)]
+]
+- PROS:
+  - Efectivo para ciclos cortos
+  - Óptimo si se trabaja en múltiples repositorios
+  - _Peer Review_
+- CONS:
+  - Requiere disciplina
+  - Rápidamente puede incorporar muchas herramientas adicionales
+???
+# 15 min
+- Hablar acerca de propios entornos para hacer pruebas
+- Importante mantener una historia limpia.
+---
+.left-column[
+# DEV
+]
+.right-column[
+## Controles locales (_local CI/CD_)
+- Primera línea de defensa
+- Primera línea de feedback
+### Tecnologías
+- Git hooks
+- Tareas en pre-commit
+  - Linting
+  - Unit testing
+  - Autogeneración de documentación
+]
+
+???
+# 5-10 min
+---
+.left-column[
+# DEV
+]
+.right-column[
+## Colaborando a _trunk_
+En términos técnicos `push`
+- Cambios continuos
+- Cambios grandes pueden ser contraproducentes
+- Es díficil si un cambio requiere colaborar en múltiples repositorios
+### Recomendaciones
+- Referencia a la tarea que se trabaja
+- No tener miedo de colaborar, fallar y revertir!
+- Mantener una historia líneal
+]
+???
+# 5-10 minutos
+---
+.left-column[
+# DEV
+]
+.right-column[
+## Intro a CI/CD
+- Proceso automático que realiza varias tareas _típicas_ en el ciclo de desarrollo
+- Ejemplo genérico
+  ``` yaml
+  - job: CI
+    - step: restore
+    - step: build
+    - step: test
+  ```
+]
+- Importante decisión tecnológica
+- Pipeline as code
+  - modular
+  - hoy en día se pueden usar varios
+- Otras tareas de CI
+  - Generar documentación
+  - Generar `metadata`
+  - Mantenimiento
+  - __Retroalimentación__!!
+???
+# 15 min
+- Explicar lo que hace un agente
+- Porque es bueno mucho y no poco
+----

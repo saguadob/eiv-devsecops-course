@@ -315,11 +315,224 @@ Cita textual:
 - Arquitecturas genéricas
   - Monolitos
   - Microservicios
-- Tabla de comparación
 
+### Arquitectura strangler
+Arquitectura que promueve las prácticas DevSecOps
+![:scale 100%](../img/dia3_strangler.png)
+- Versionamiento
+- Inmutabilidad
+- Desfasamiento progresivo
 ]
 
 ???
 # 20 min
-![tabla de comparación]
+![tabla de comparación](../img/dia3_mon_micro_tabla.jpg)
+- cuando hablando de wrangler mencionar qué hacer para saber cuando desfasar algo viejo
+---
+.left-column[
+# Feedback
+Monitor
+]
+.right-column[
+## Telemetría
+> Proceso de comunicación automático, donde mediciones e información relevante, se recolecta en puntos remotos y se transmiten a un equipo para su monitorieo.
+
+Dónde?
+- Aplicaciones
+- Entorno
+- Pipeline
+]
+
+???
+# 5 min
+---
+.left-column[
+# Feedback
+Monitor
+]
+.right-column[
+## Infrastructura de telemetría
+Tradicionalmente hay segregación
+- Aplicaciones: Log
+- Infraestructure: Los servicios están ⬆️ ó ⬇️
+  >Este tipo de arquitectura no genera un visión holística
+
+
+Una propuesta que soporte Devops
+.center[![:scale 50%](../img/dia3_infra_telem.png)]
+]
+???
+# 15 min
+- Explicar que se recolecta en cada etapa
+  - Business: Compras, vetnas
+  - Application: Http requests, db mean quedry time
+  - Entorno: OS CPU Memoria
+---
+.left-column[
+# Feedback
+Monitor
+]
+.right-column[
+## Logs
+> En el módulo de SRE tocaremos a más detalle la recolección de telemetría
+
+- _Ejercicio_: Qué productos de ingería tienen telemetría hoy en día?
+
+- Escoger el mejor _contexto_ para una entrada de log
+  - Debug
+  - Info
+  - Warn
+  - Error
+  - Fatal
+]
+
+???
+# 10 min
+---
+.left-column[
+# Feedback
+Monitor
+]
+.right-column[
+## Consecuencias de incluir telemtría en nuestra práctica de DevSecOps
+
+- __Visbilidad__! Tanto de lo positivo cómo de lo negativo
+- `Blameless culture` / Cultura de no culpamiento
+- Usar la práctica de deducir bajo hipótesis
+  > Qué sintomas hay? ➡️ Deducción del error
+- Hay que facilitar el crear métricas
+  - Bibliotecas
+  - Frameworks
+- Acceso instantaneo a los _ radiadores_ de información
+- Siempre buscar dónde hay poca telemetría
+]
+
+???
+# 15 min
+- Hablar incidente corralejas
+---
+.left-column[
+# Feedback
+Monitor
+]
+.right-column[
+## Qué es una buena métrica
+En los diferentes niveles del sistema
+- Capa de Negocio: ???
+- Aplicación: ???
+- Entorno: ???
+  - Importancia de _autodiscovery_
+  - _Objetivo_: Facilidad de señalar quién y dónde.
+  - No solo en `prod`; en todos los entornos!
+- Métricas externas (no software)
+  - Despliegues
+  - Manentimiento
+  - Indexamiento
+]
+
+???
+# 20 min
+- Explicar en infrastructura el desfio de emparejar infrastructura con aplicaciones
+---
+.left-column[
+# Feedback
+Monitor
+]
+.right-column[
+> Más a profundidad en el siguiente módulo
+- Usar estadísticas
+  - Medias y desviaciones
+- Acumulamiento de experiencia
+  - Creación de alertas y diagnosticos
+- __Objetivo__: Poder anticipar errores desastrozos.
+]
+???
+# 10 min
+- Las medias y desviaciones se calculan después de la recolección
+- Implica la creación de un nuevo sistema de monitoreo
+---
+.left-column[
+# Ops
+]
+.right-column[
+## Correlación de telmetría y despliegues
+- __Definición de Done__✅: Una tarea traducida a una implementación que funciona en `prod` como se ha planeado.
+- Importancia de el monitoreo continuo durante despliegues
+   > Se ha _roto_ algo durante un despliegue?
+
+<div class="mermaid">
+graph LR
+        A(Despliegue) --> B(Monitoreo)
+        B --> C(Detección)
+        C --> D(Automatización)
+        D --> A
+</div>
+
+- Contener VS Reparar
+  - Inmutabilidad
+  - Reparar puede ser contraproducente
+]
+
+???
+# 15 min
+---
+.left-column[
+# OPS
+]
+.right-column[
+## Feedback dirigido a DEV y OPS
+- _Día 1_: Incluir OPS en Equipo Desarrollo
+- Incluir: Equipo de Desarrollo en OPS
+- __Paging__, en español estar de guardía
+- El equipo (dev y ops) están de guardia
+
+### Propuesta para nuevos proyectos
+- DEV son los primeros operarios de producción
+- Reciben ayuda de OPS con experiencia
+]
+
+???
+# 5 min
+- Hablar de diferentes modelos y preguntar.
+---
+.left-column[
+# Feedback
+]
+.right-column[
+## Reflexión
+- Nunca hablamos de `operate` a fondo, porqué?
+- Cultura tradicional de _aprobar peticiones de cambio_
+  - Evitar sobre controlar
+- DevSecOps habilita realizar lanzamientos (_release_), cuando se desee, require coordinar que las pruebas no interfieran con los lazamientos
+- Adoptar el trabajo de pares: _peer review_ y _pair programming_
+- __Evitar__:
+  - Pruebas manuales
+  - Congelar cambios al código fuente cuando se van a hacer lanzamientos.
+]
+???
+
+---
+.left-column[
+# Complemento
+]
+.right-column[
+## Cultira de aprendizaje
+- Blameless
+- Postmortems
+- Máxima Visibilidad
+- 0 tolerancia a los errores
+- Injectar errores a propósito para saber como se comporta un sistema
+- Drills
+
+## Distribuir información
+- Chats y bots
+- Usar una sola fuente de conocimiento
+  - Documentos y procesos
+  - Herramientas
+  - Reportes
+- Crear un `pipeline` que documente lo que hace cada vez que actua
+]
+
+???
+# 15 min
 ---

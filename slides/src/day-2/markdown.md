@@ -69,9 +69,9 @@ Hay principalmente dos:
 
 ## Ejemplos - Estáticos
 
-- [SonarQ](https://sonarcloud.io/)
+- [SonarCloud](https://sonarcloud.io/)
 
-  .img-50[![Sonar](../img/risk-analysis.png)]
+  .img-85[![Sonar](../img/2022-06-30_sonarCloud.jpg)]
 
 - [GitHub CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning)
 
@@ -251,3 +251,16 @@ Personal especializado en explotación de vulnerabilidades. En otras palabras, h
 
 # Software Supply Chain Security
 
+Se trata de asegurar que el código usado por nuestra aplicación (SDK, paquetes, herramients, contenedores) esté también protegido.
+
+Para ello se usa una multitud de herramientas que recolectan datos y analizan los repositorios, herramientas y demás.
+
+--
+
+<div style = "display: flex; justify-content: space-around; width: 100%">
+    <div>
+      <p>Una de las herramientas más comunes es <a href="https://snyk.io/">Snyk</a></p>
+      <img style = "height: 100px;" src = "../img/Snyk_avatar.png">
+    </div>
+    <img style = "flex: 1 1 0; width: 80%" src = "../img/2022-06-30_Snyk.jpg">
+</div>

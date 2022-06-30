@@ -307,11 +307,11 @@ En términos técnicos `push`
 ## Intro a CI/CD
 - Proceso automático que realiza varias tareas _típicas_ en el ciclo de desarrollo
 - Ejemplo genérico
-  ``` yaml
-  - job: CI
-    - step: restore
-    - step: build
-    - step: test
+  ```yaml
+  job: CI
+    step: restore
+    step: build
+    step: test
   ```
 ]
 - Importante decisión tecnológica
@@ -328,3 +328,53 @@ En términos técnicos `push`
 - Explicar lo que hace un agente
 - Porque es bueno mucho y no poco
 ----
+.left-column[
+# DEV
+]
+.right-column[
+## Colaboración usando _Pull request_
+- Característica de GIT que permite solicitar que los cambios de un miembro del equipo sean incluidos en _trunk_
+- Genera visibilidad y documentación de los cambios
+- Eleva la calidad del software
+  - Revisión por parte de pares
+  - Genera discusión
+- Combinación con _guardas_
+]
+
+???
+# 10 minutos
+- Ejemplos de guardas
+  - `main` no puede tener cambios directos
+  - Obligatorio que alguine dfierente al autor apruebe los cambios
+  - CI/CD debe estar en verde
+---
+.left-column[
+# DEV
+]
+.right-column[
+## Colaboración en _trunk_
+- CI/CD en `pull_request` es especulativo
+- El entorno efímero ayuda a garantizar predictibilidad
+- Recomendaciones basadas en expeiencia
+  - `build`
+    - Si relevante, compilar en varias plataformas
+    - Garantizar que el proceso desde 0. 
+  - `test`
+    - Pruebas unitarias y de integración
+    - Test coverage
+    - Linting
+  - Generar artefactos
+    - Semantic versioning
+    - No solo aplica para software.
+]
+
+???
+# 15 min
+- Hacer comentario acerca del pinning de versiones
+- Proceso desde 0, que el agente haga lo mismo que el readme
+- Hacer comentario que las prubas de integración no tienen que ser totales.
+
+---
+
+### 
+Incluir infrastructure as code?

@@ -142,6 +142,14 @@ Las empresas tienen sus propios sistemas de compliance
 
 Suelen ser basados en la industria a la que pertenecen (bancaria, industrial, servicios, etc.)
 
+--
+
+Pero existen frameworks como:
+
+- GDPR
+- ISO 27001
+- entre otros
+
 ---
 
 # Security Compliance Checks
@@ -242,3 +250,4 @@ Personal especializado en explotación de vulnerabilidades. En otras palabras, h
 ---
 
 # Software Supply Chain Security
+

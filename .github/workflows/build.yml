@@ -23,17 +23,18 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [windows-latest, ubuntu-latest]
+    runs-on: ubuntu-latest # ${{ matrix.os }}
+    #strategy:
+    #  matrix:
+    #    os: [windows-latest, ubuntu-latest]
     steps:
       - name: Get the sources
         uses: actions/checkout@v1
       - name: Run the build script
         uses: cake-build/cake-action@v1
-        working-directory: app
+        working-directory: app/
         with:
+          script-path: app/build.cake
           target: Build
           cake-version: 0.38.5
           arguments: |

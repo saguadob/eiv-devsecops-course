@@ -12,9 +12,8 @@ class: center, middle
 2. Cumplimiento de normativas de Seguridad (Security Compliance checks)
 3. Detección activa de vulnerabilidades (Vulnerability detection)
 4. Protección en la cadena de suministros (Software Supply Chain Securitys)
-5. Cómo mitigar todas de las anteriores
-6. Secure Development (Desarrollo seguro) + Threat modelling (Modelo de amenazas)
-7. Cultura laboral
+5. Secure Development (Desarrollo seguro) + Threat modelling (Modelo de amenazas)
+6. Cultura laboral
 
 ---
 
@@ -74,6 +73,9 @@ Hay principalmente dos:
   .img-85[![Sonar](../img/2022-06-30_sonarCloud.jpg)]
 
 - [GitHub CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning)
+
+???
+Abrir repositorio y mostrar un commit con errores de vulnerabilidades: https://github.com/saguadob/eiv-devsecops-course/pull/18
 
 ---
 
@@ -264,3 +266,23 @@ Para ello se usa una multitud de herramientas que recolectan datos y analizan lo
     </div>
     <img style = "flex: 1 1 0; width: 80%" src = "../img/2022-06-30_Snyk.jpg">
 </div>
+
+---
+
+# Software Supply Chain Security
+
+## Qué pasa cuando hay un ataque de éste tipo?
+
+Ejemplo: Solar Winds Hack
+
+--
+
+Solar Winds es un proveedor the sistemas de administración y monitoreo de infraestructura.
+
+--
+
+Uno de esos sistemas esl el sistema Orion, utilizado por alreadedor de 30K organizaciones.
+
+--
+
+Se trata de un ataque [Backdoor](https://www.google.com/url?client=internal-element-cse&cx=007930462003869053427:vyjggrsucq4&q=https://owasp.org/www-pdf-archive/OWASP_10_Most_Common_Backdoors.pdf&sa=U&ved=2ahUKEwiapdu-8Nf4AhVkQ_EDHWROCJAQFnoECAAQAQ&usg=AOvVaw3uQ_J1uj7jcYGZk1GJ04Ce) que consiste en implantar un acceso remoto no autorizado a los sistemas atacados.

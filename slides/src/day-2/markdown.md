@@ -273,7 +273,7 @@ Para ello se usa una multitud de herramientas que recolectan datos y analizan lo
 
 ## Qué pasa cuando hay un ataque de éste tipo?
 
-Ejemplo: Solar Winds Hack
+Ejemplo: [SOLAR WINDS HACK](https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack?t=1656688141575)
 
 --
 
@@ -286,3 +286,81 @@ Uno de esos sistemas esl el sistema Orion, utilizado por alreadedor de 30K organ
 --
 
 Se trata de un ataque [Backdoor](https://www.google.com/url?client=internal-element-cse&cx=007930462003869053427:vyjggrsucq4&q=https://owasp.org/www-pdf-archive/OWASP_10_Most_Common_Backdoors.pdf&sa=U&ved=2ahUKEwiapdu-8Nf4AhVkQ_EDHWROCJAQFnoECAAQAQ&usg=AOvVaw3uQ_J1uj7jcYGZk1GJ04Ce) que consiste en implantar un acceso remoto no autorizado a los sistemas atacados.
+
+---
+
+# Software Supply Chain Security
+
+## Solar Winds Attack
+
+.img-75[![Solar-Winds](../img/SolarWindsBleeping.png)]
+
+(Tomado de [Bleeping Computer](https://www.bleepingcomputer.com/news/security/the-solarwinds-cyberattack-the-hack-the-victims-and-what-we-know/))
+
+---
+
+# Software Supply Chain Security
+
+## Solar Winds Attack
+
+Aún con herramientas pra prevenir, si el código comprometido viene de una herramienta como el Sistema Operativo. **AÚN SE ES VULNERABLE** 😱😱😱😱😱
+
+---
+
+# Desarrollo Seguro (Secure Development)
+
+Se trata de establecer prácticas conscientes de seguridad informática _durante_ el desarrollo.
+
+--
+
+Prevención > Corrección.
+
+--
+
+Una de las metodologías mas comunes es Threat Modeling (Modelo de amenazas)
+
+--
+
+[STRIDE Framweork](https://en.wikipedia.org/wiki/STRIDE):
+- **Spoofing**: Hacerse pasar por alguien mas
+- **Tampering**: Modificar data o manipular información "on-the-fly"
+- **Repudiation**: Permanecer oculto, no dejar rastro
+- **Information Disclosure**: Enviar información a lugares no autorizados
+- **Denial of Service**: Degradar el sistema y prevenir que funcione
+- **Elevation of Privilege**: Sltar los mecanismos de control de acceso
+
+---
+
+# Desarrollo Seguro (Secure Development)
+
+## Threat Modeling
+
+.img-75[![Threat Modelling](../img/ThreatModel.png)]
+
+Tomado de [A Guide to Threat Modelling for Developers](https://martinfowler.com/articles/agile-threat-modelling.html)
+
+---
+
+# Cultura laboral
+
+Existen varias metodologías y procesos adicionales tales cómo
+
+--
+
+- Asignar expertos en seguridad durante incepción, diseño y arquitectura de los sistemas
+
+--
+
+- Promover buenas prácticas
+
+--
+
+- Corregir problemas de seguridad holísticos en PRs
+
+--
+
+- Entrenamiento en seguridad
+
+--
+
+- Hackatons + CTF

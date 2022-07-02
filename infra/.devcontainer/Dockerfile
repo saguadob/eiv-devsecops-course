@@ -1,8 +1,9 @@
 # You can pick any Debian/Ubuntu-based image. 😊
 FROM mcr.microsoft.com/vscode/devcontainers/base:0-bullseye
 
-RUN apt-get update
-RUN apt-get install dos2unix
+RUN apt-get update && \
+    apt-get install dos2unix && \
+    apt-get clean
 
 COPY library-scripts/*.sh /tmp/library-scripts/
 RUN find /tmp/library-scripts/ -type f -print0 | xargs -0 dos2unix

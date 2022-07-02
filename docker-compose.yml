@@ -14,8 +14,7 @@ services:
         - UPGRADE_PACKAGES=true
     volumes:
       - /var/run/docker.sock:/var/run/docker-host.sock:bind
-      # Mount the root folder that contains .git
-      - .:/workspace:cached
+      - .:/workspace:cached # Mount the root folder that contains .git
     env_file:
       - infra/.devcontainer/devcontainer.env
 
@@ -28,7 +27,7 @@ services:
       - 4000
       - 35729
     command: jekyll serve --source /workspace/slides/src --force_polling --livereload
-  
+
   app-development:
     build:
       context: app/.devcontainer

@@ -17,7 +17,7 @@ class: center, middle
 
 ---
 
-# A Análisis estático de Código Fuente (Static Analysis)
+# Análisis estático de Código Fuente (Static Analysis)
 
 Es como un `linter`
 
@@ -31,7 +31,7 @@ A veces conocidos como Static Application Security Testing (SAST)
 
 ---
 
-# A Análisis estático de Código Fuente (Static Analysis)
+# Análisis estático de Código Fuente (Static Analysis)
 
 ## Sabores 🍬
 
@@ -60,6 +60,10 @@ Hay principalmente dos:
 - [SonarLint](https://www.sonarlint.org/vscode)
 
   .img-75[![Sonar](../img/detect-issue.png)]
+
+???
+https://www.sonarlint.org/vscode/
+- Mostrar el output de VirtualChoreography (porque no hay para C#)
 
 
 ---

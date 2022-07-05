@@ -2,74 +2,111 @@ class: center, middle
 
 # DevSecOps y SRE
 
-## para el diseño , desarrollo y operaciónd e sistemas de información modernos.
+## para el diseño , desarrollo y operación de sistemas de información modernos.
 
 ---
 
-layout: false
 .left-column[
-  ## Quién soy?
+Quién soy?  
+
+
+![:scale 100%](https://customer-success.neptune-software.cloud/media/root/sig_gen/people/sebastian.aguado@neptune-software.com.png)
 ]
 .right-column[
 
-- Sebastián Aguado Bedoya
+# Sebastián Aguado Bedoya
 
 - Egresado de la ECI del programa de Ingeniería de Sistemas
 
-- +10 años de experiencia en Desarrollo de Software, +4 ãnos de experiencia en DevOps
+- +10 años de experiencia en Desarrollo de Software, +4 ãnos de experiencia prácticando DevSecOps
 
-- _Senior Cloud Engineer_ en Neptune Software AS
+- Actualemente trabajo como _Senior Cloud Engineer_ en Neptune Software AS
 
-- Touch support for smart phones and pads, i.e. swipe to navigate slides
-
-.footnote[.red[*] At least browsers try their best]
+- LinkedIn: [s-aguado](https://www.linkedin.com/in/s-aguado/)
 ]
-
-# Acerca del curso
-
-- Este es el material  del curso porque
-- 
----
-
-# Agenda Día 1
-
-- Historía de DevOps
-- Dónde empezar.
-
-
+???
+# 5 min (5 min)
 ---
 
 # Historía de DevSecOps
 
+.center[
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/kBV8gPVZNEE?cc_lang_pref=es&cc_load_policy=1" title="What is DevOps?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
 
-
+- Lean Manufactoring / Toyota Kaya
+- 2007 / 2008
+- Discusiones y _meetups_
+- Devops days 2009, Ghent Bélgica
+- Adopción en gran escala
+???
+# 10 minutos (15 min)
+- Hablar de metodologías ágiles y las fábricas de Toyota
+- https://legacy.devopsdays.org/events/2009-ghent/program
 ---
 .left-column[
-  # Dónde empezar?
-  ## Flujos de Valor (_Value Stream_)
+Intro
 ]
 .right-column[
+# Qué es Devops?
 
+- No hay una definición formal
+
+> Conjunto de prácticas y procesos que empoderan a un equipo de desarrollo a crear valor de manera ágil y segura.
+
+- C.A.L.M.S
+  - Cultura
+  - Automatización
+  - Lean
+  - Medición
+  - _Sharing_ 
+
+- _You build it, you run it_
+]
+???
+# 10 minutos (25 min)
+---
+class: center, middle
+![:scale 100%](../img/devsecops.webp)
+---
+.left-column[
+Intro
+]
+.right-column[
+# La paradoja
+
+- Dev quiere crear cambio constante
+- OPS quiere estabilidad
+
+- Calidad afectada
+- Desarrollador no conoce cómo u software funciona en la realidad
+- Procesos largos para que cambios tengan efecto
+]
+???
+# 10 minutos (35 min)
+- Hablar de la espiral de bajada
+- Every company is a software company
+---
+.left-column[
+Dónde Empezar?
+]
+.right-column[
+# Flujos de Valor (_Value Stream_)
 - Hacer el ejercicio de _Value Stream Mapping_
-
 - Qué parte del sistema genera valor al cliente?
-
 - Generar iniciativas
   - (_ej._) Eliminar testing como una fase, incuirlo al día a dia
   - (_ej._) Reducir el tiempo ed despliegues
 
 - __Objetivo__: Incrementar la productividad del equipo de desarrollo
-
 ]
-
 ???
-# 20 minutos
+# 20 minutos (55min)
 - Value Stream: Desde que una idea se concibe hasta que está a manos del cliente.
 - Cliente: Quién se beneficia del sistema
-
 ---
 .left-column[
-  # Dónde empezar?
+Dónde empezar?
 ]
 .right-column[
 ## Tipos de Projectos
@@ -83,11 +120,10 @@ layout: false
 - Convencer a los opositores.
 ]
 ???
-
+# 10 min (1h 5m)
 ---
-
 .left-column[
-# Dónde empezar
+Dónde empezar?
 ]
 .right-column[
 ## Cómo fomentar la _evolución_ del flujo de Valor
@@ -99,6 +135,7 @@ layout: false
 ]
 
 ???
+# 10 min (1h 15m)
 1. Ejemplos de metas comunes
   - Reduce the percentage of the budget spent on product support and unplanned work by 50%.
   - Ensure lead time from code check-in to production release is one week or less for 95% of changes.
@@ -116,8 +153,8 @@ Diseño del equipo
   - Tener un miembro dedicado ó alquilado del equipo _OPS_
   - OPS debe ser integrado en los rituales DEV (sprint planning, retro, etc)
 ]
-
 ???
+# 10 min (1h 15m)
 Un equipo puede ser como un producto de Azure
 Las tareas de OPS deben aparecer en el tablero kanban
 ---
@@ -143,11 +180,11 @@ DEV
 ]
 ---
 .left-column[
-# DEV
+DEV
 ]
 .right-column[
 ## Obtener código fuente
-- Sistema de versionamiento de Código (_VCS Version Control System)
+- Sistema de versionamiento de Código (_VCS Version Control System_)
   - GIT
   - Subversion
   - Team Foundation
@@ -157,7 +194,7 @@ DEV
 ]
 
 ???
-# 5 - 10 min
+# 5 - 10 min (1h 25min)
 - Comentar experiencia con herramientas como Github, GitLab, Az Devops
 - Empezar con uno solo, y luego transicionar a múltiples.
 - Recomendar usar GIT y sus variaciones
@@ -174,9 +211,8 @@ DEV
   - Estado de CI
   - Contactos, changelog, codeowners
 ]
-
 ???
-# 5 min
+# 5 min (1h 30m)
 - https://github.com/hashicorp/terraform/blob/main/README.md
 - Guía de contribución en este link: https://github.com/hashicorp/terraform/blob/main/.github/CONTRIBUTING.md
 ## TODO
@@ -186,7 +222,7 @@ DEV
   - Cómo correr local
 ---
 .left-column[
-# DEV
+DEV
 ]
 .right-column[
 ## Entornos de desarrollo efímeros
@@ -199,7 +235,7 @@ DEV
 ]
 
 ???
-# 5 min y 10 laboratios
+# 5 min y 10 laboratios (1h 45 min)
 - Hablar de arquitecturas que facilitan lo anterior.
 - Ejemplo de una app movil preguntar
 ---
@@ -213,7 +249,8 @@ DEV
 - La importacia de _templating_
 - Es común con:
   - Bibliotecas
-  - Microservicsio
+  - Microservicio
+
 ## Brownfield
 - *Importante*: Es mala practica contribuir directamente en _trunk_
 - Hay diferentes actividades en el ciclo de desarrollo
@@ -224,11 +261,11 @@ DEV
 ]
 
 ???
-# 5 - 10 min
+# 5 - 10 min (2h)
 - Consideraciones: Que es el desafio de un bootstrap
 ---
 .left-column[
-# DEV
+DEV
 ]
 .right-column[
 ## Gitflow
@@ -236,7 +273,7 @@ DEV
 ]
 
 ???
-#20 mins
+# 20 mins (2h 20m)
 - Explicar toda la historia
 - PROS:
   - Funciona bien en un monorepo
@@ -247,7 +284,7 @@ DEV
   - Experiencia en Kredinor.
 ---
 .left-column[
-# DEV
+DEV
 ]
 .right-column[
 ## Github flow
@@ -261,12 +298,12 @@ DEV
   - Requiere disciplina
   - Rápidamente puede incorporar muchas herramientas adicionales
 ???
-# 15 min
+# 15 min (2h 35m)
 - Hablar acerca de propios entornos para hacer pruebas
 - Importante mantener una historia limpia.
 ---
 .left-column[
-# DEV
+DEV
 ]
 .right-column[
 ## Controles locales (_local CI/CD_)
@@ -279,12 +316,11 @@ DEV
   - Unit testing
   - Autogeneración de documentación
 ]
-
 ???
-# 5-10 min
+# 5-10 min (2h 45m)
 ---
 .left-column[
-# DEV
+DEV
 ]
 .right-column[
 ## Colaborando a _trunk_
@@ -298,10 +334,10 @@ En términos técnicos `push`
 - Mantener una historia líneal
 ]
 ???
-# 5-10 minutos
+# 5-10 minutos (2h 55m)
 ---
 .left-column[
-# DEV
+DEV
 ]
 .right-column[
 ## Intro a CI/CD
@@ -324,12 +360,12 @@ En términos técnicos `push`
   - Mantenimiento
   - __Retroalimentación__!!
 ???
-# 15 min
+# 15 min (3h 10m)
 - Explicar lo que hace un agente
 - Porque es bueno mucho y no poco
 ----
 .left-column[
-# DEV
+DEV
 ]
 .right-column[
 ## Colaboración usando _Pull request_
@@ -342,14 +378,14 @@ En términos técnicos `push`
 ]
 
 ???
-# 10 minutos
+# 10 minutos (3h 20m)
 - Ejemplos de guardas
   - `main` no puede tener cambios directos
   - Obligatorio que alguine dfierente al autor apruebe los cambios
   - CI/CD debe estar en verde
 ---
 .left-column[
-# DEV
+DEV
 ]
 .right-column[
 ## Colaboración en _trunk_
@@ -369,12 +405,37 @@ En términos técnicos `push`
 ]
 
 ???
-# 15 min
+# 15 min (3h 35m)
 - Hacer comentario acerca del pinning de versiones
 - Proceso desde 0, que el agente haga lo mismo que el readme
 - Hacer comentario que las prubas de integración no tienen que ser totales.
 
 ---
+.left-column[
+DEV
+]
+.right-column[
+# Everything as code
+- Pipeline
+- Configuración
+- Infrastructura 
+- Seguridad
+- Políticas
+- Documentación
+]
 
-### 
-Incluir infrastructure as code?
+???
+# 15 min (3h 50m)
+---
+.left-column[
+DEV
+]
+.right-column[
+# Tooling
+- API
+- SDK
+- Herramientas caseras
+]
+???
+# 15 min (4h 05m)
+---

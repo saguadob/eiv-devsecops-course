@@ -287,16 +287,19 @@ DEV
 DEV
 ]
 .right-column[
-## Github flow
-.center[![:scale 100%](../img/dia1_ghflow.webp)]
-]
+# Github flow
+
+![:scale 100%](../img/dia1_ghflow.webp)
+
 - PROS:
   - Efectivo para ciclos cortos
   - Óptimo si se trabaja en múltiples repositorios
   - _Peer Review_
+
 - CONS:
   - Requiere disciplina
   - Rápidamente puede incorporar muchas herramientas adicionales
+]
 ???
 # 15 min (2h 35m)
 - Hablar acerca de propios entornos para hacer pruebas
@@ -309,6 +312,7 @@ DEV
 ## Controles locales (_local CI/CD_)
 - Primera línea de defensa
 - Primera línea de feedback
+
 ### Tecnologías
 - Git hooks
 - Tareas en pre-commit
@@ -328,7 +332,8 @@ En términos técnicos `push`
 - Cambios continuos
 - Cambios grandes pueden ser contraproducentes
 - Es díficil si un cambio requiere colaborar en múltiples repositorios
-### Recomendaciones
+
+  ### Recomendaciones
 - Referencia a la tarea que se trabaja
 - No tener miedo de colaborar, fallar y revertir!
 - Mantener una historia líneal
@@ -349,7 +354,6 @@ DEV
     step: build
     step: test
   ```
-]
 - Importante decisión tecnológica
 - Pipeline as code
   - modular
@@ -359,6 +363,7 @@ DEV
   - Generar `metadata`
   - Mantenimiento
   - __Retroalimentación__!!
+  ]
 ???
 # 15 min (3h 10m)
 - Explicar lo que hace un agente
@@ -438,4 +443,3 @@ DEV
 ]
 ???
 # 15 min (4h 05m)
----

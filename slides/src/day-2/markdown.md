@@ -10,7 +10,7 @@ class: center, middle
 
 1. Análisis estático de Código Fuente (Static Analysis)
 2. Cumplimiento de normativas de Seguridad (Security Compliance checks)
-3. Detección activa de vulnerabilidades (Vulnerability detection)
+3. Detección activa de vulnerabilidades (Vulnerability Detection)
 4. Protección en la cadena de suministros (Software Supply Chain Securitys)
 5. Secure Development (Desarrollo seguro) + Threat modelling (Modelo de amenazas)
 6. Cultura laboral
@@ -196,7 +196,7 @@ En el caso de DevOps pueden ser políticas cómo:
 
 ---
 
-# Detección activa de vulnerabilidades (Vulnerability detection)
+# Detección activa de vulnerabilidades (Vulnerability Detection)
 
 AKA Dynamic Application Security Testing (DAST)
 
@@ -212,7 +212,7 @@ Básicamente, simular `H4X0RZ`
 
 ---
 
-# Detección activa de vulnerabilidades (Vulnerability detection)
+# Detección activa de vulnerabilidades (Vulnerability Detection)
 
 Se puede automatizar cómo lost SAST
 
@@ -220,7 +220,7 @@ Se puede automatizar cómo lost SAST
 
 ---
 
-# Detección activa de vulnerabilidades (Vulnerability detection)
+# Detección activa de vulnerabilidades (Vulnerability Detection)
 
 ## Ejemplo
 
@@ -233,7 +233,7 @@ Se puede automatizar cómo lost SAST
 
 ---
 
-# Detección activa de vulnerabilidades (Vulnerability detection)
+# Detección activa de vulnerabilidades (Vulnerability Detection)
 
 ## Pen-Testing
 
@@ -249,19 +249,52 @@ Personal especializado en explotación de vulnerabilidades. En otras palabras, h
 
 ---
 
+# Detección activa de vulnerabilidades (Vulnerability Detection)
+
+## Web Application Firewalls (WAF)
+
+- Firewalls y reverse-proxies
+- Permiten configurar reglas basadas en...
+
+--
+
+OWASP!
+
+---
+
+# Vulnerability Detection
+
+## Web Application Firewalls (WAF)
+
+.img-85[![managed rules](../img//managed-rules-01.png)]
+
+???
+https://docs.microsoft.com/en-us/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules?tabs=owasp32
+- SQL-injection attacks
+- Cross-site scripting attacks
+- Other common attacks, such as command injection, HTTP request smuggling, HTTP response splitting, and remote file inclusion
+- HTTP protocol violations
+- HTTP protocol anomalies, such as missing host user-agent and accept headers
+- Bots, crawlers, and scanners
+- Common application misconfigurations (for example, Apache and IIS)
+
+---
+
 # Protección en la cadena de suministros (Software Supply Chain Security)
 
 - Asegurar los paquetes que se utilizan al crear y desplegar aplicaciones
 
+--
+
+- Se trata de asegurar que el código usado por nuestra aplicación (SDK, paquetes, herramients, contenedores) esté también protegido.
+
+--
+
+- Para ello se usa una multitud de herramientas que recolectan datos y analizan los repositorios, herramientas y demás.
+
 ---
 
 # Software Supply Chain Security
-
-Se trata de asegurar que el código usado por nuestra aplicación (SDK, paquetes, herramients, contenedores) esté también protegido.
-
-Para ello se usa una multitud de herramientas que recolectan datos y analizan los repositorios, herramientas y demás.
-
---
 
 <div style = "display: flex; justify-content: space-around; width: 100%">
     <div>
@@ -344,6 +377,19 @@ Una de las metodologías mas comunes es Threat Modeling (Modelo de amenazas)
 Tomado de [A Guide to Threat Modelling for Developers](https://martinfowler.com/articles/agile-threat-modelling.html)
 
 ---
+
+# Secure Development
+
+.img-100[![Threat Modelling](../img/Threat_model1.png)]
+
+---
+
+# Secure Development
+
+.img-100[![Threat Modelling](../img/Threat_model2.png)]
+
+---
+
 
 # Cultura laboral
 

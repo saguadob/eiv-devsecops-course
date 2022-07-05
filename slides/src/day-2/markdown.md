@@ -8,16 +8,16 @@ class: center, middle
 
 # Agenda
 
-1. Análisis estático de Código Fuente (Static Analysis)
-2. Cumplimiento de normativas de Seguridad (Security Compliance checks)
-3. Detección activa de vulnerabilidades (Vulnerability Detection)
-4. Protección en la cadena de suministros (Software Supply Chain Securitys)
-5. Secure Development (Desarrollo seguro) + Threat modelling (Modelo de amenazas)
-6. Cultura laboral
+1. Análisis Estático De Código Fuente (Static Analysis)
+2. Cumplimiento De Normativas De Seguridad (Security Compliance Checks)
+3. Detección Activa De Vulnerabilidades (Vulnerability Detection)
+4. Protección En La Cadena De Suministros (Software Supply Chain Security)
+5. Secure Development (Desarrollo Seguro) + Threat Modeling (Modelo De Amenazas)
+6. Cultura Laboral
 
 ---
 
-# Análisis estático de Código Fuente (Static Analysis)
+# Análisis Estático De Código Fuente (Static Analysis)
 
 Es como un `linter`
 
@@ -31,7 +31,7 @@ A veces conocidos como Static Application Security Testing (SAST)
 
 ---
 
-# Análisis estático de Código Fuente (Static Analysis)
+# Static Analysis
 
 ## Sabores 🍬
 
@@ -59,11 +59,11 @@ Hay principalmente dos:
 
 - [SonarLint](https://www.sonarlint.org/vscode)
 
-  .img-75[![Sonar](../img/detect-issue.png)]
+  .img-100[![Sonar](../img/detect-issue.png)]
 
 ???
 https://www.sonarlint.org/vscode/
-- Mostrar el output de VirtualChoreography (porque no hay para C#)
+- Mostrar el output de cualquier proyecto (ésta herramienta no soporta .NET)
 
 
 ---
@@ -85,7 +85,7 @@ Abrir repositorio y mostrar un commit con errores de vulnerabilidades: https://g
 
 # Static Code Analysis
 
-Pero ¿cómo funcionan?
+Pero ¿cómo funcionan éstas herramientas?
 
 La respuesta es [OWASP](https://owasp.org/)
 
@@ -113,24 +113,24 @@ La respuesta es [OWASP](https://owasp.org/)
 
 # Static Code Analysis
 
-## Anatomía de una vulnerabilidad
+## Anatomía De Una Vulnerabilidad
 
 - Common Weakness Enumeration: **CWE**
   - Catalogar "debilidades"
-  - Ejemplo: _CWE-787: Out-of-bounds Write_
+  - Ejemplo: [CWE-787: Out-of-bounds Write](https://cwe.mitre.org/data/definitions/787.html)
 
 --
 
 - Common Vulnerabilities and Exposures: **CVE**
   - Catalogar Vulnerabilidades específicas
-  - Ejemplo: _CVE-2021-35212: An SQL injection Privilege Escalation Vulnerability was discovered in the Orion Platform reported by the ZDI Team_
+  - Ejemplo: [CVE-2021-35212: An SQL injection Privilege Escalation Vulnerability was discovered in the Orion Platform reported by the ZDI Team](https://www.cvedetails.com/cve/CVE-2021-35212/)
 
 --
 
 - Common Vulnerability Scoring System **CVSS**
-  - 0 a 10. None (0), Low (0.1-3.9), Mid (4.0-6.9), High (7.0-8.9), Critical (9.0-10.0)
+  - Puntaje de 0 a 10. None (0), Low (0.1-3.9), Mid (4.0-6.9), High (7.0-8.9), Critical (9.0-10.0)
   - Puntaje del impacto de una vulnerabilidad 😱 basado en multiples factores
-  - Ejemplo: _CVE-2021-35212 tiene un puntaje de 9.0_
+  - Ejemplo: [CVE-2021-35212](https://www.cvedetails.com/cve/CVE-2021-35212/) tiene un puntaje de 9.0
 
 ---
 
@@ -144,16 +144,16 @@ _DEPENDE_
 
 --
 
-Las empresas tienen sus propios sistemas de compliance
+Las empresas tienen sus propios sistemas de cumplimiento de normatividades (compliance)
 
 Suelen ser basados en la industria a la que pertenecen (bancaria, industrial, servicios, etc.)
 
 --
 
-Pero existen frameworks como:
+Y existen existen frameworks como:
 
-- GDPR
-- ISO 27001
+- [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/)
+- [ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)
 - entre otros
 
 ---
@@ -164,7 +164,7 @@ En el caso de DevOps pueden ser políticas cómo:
 
 --
 
-- Taggear rescuros apropiadamente
+- Taggear rescuros apropiadamente (Tags cómo en AWS, para agrupar recursos)
 
 --
 
@@ -172,11 +172,11 @@ En el caso de DevOps pueden ser políticas cómo:
 
 --
 
-- prevenir automáticamente el uso de paquetes con vulnerabilidades
+- Prevenir o alertar del uso de paquetes con vulnerabilidades automáticamente
 
 --
 
-- Multi Facot authenticatioin para dispositivos
+- Multi-Factor-Authentication para dispositivos
 
 --
 
@@ -192,11 +192,15 @@ En el caso de DevOps pueden ser políticas cómo:
 
 --
 
-- ETC...
+- Políticas para resolver vulnerabilidades, e.g. "criticals en menos de 15 días"
+
+--
+
+- etc...
 
 ---
 
-# Detección activa de vulnerabilidades (Vulnerability Detection)
+# Detección Activa De Vulnerabilidades (Vulnerability Detection)
 
 AKA Dynamic Application Security Testing (DAST)
 
@@ -212,15 +216,18 @@ Básicamente, simular `H4X0RZ`
 
 ---
 
-# Detección activa de vulnerabilidades (Vulnerability Detection)
+# Detección Activa De Vulnerabilidades (Vulnerability Detection)
 
 Se puede automatizar cómo lost SAST
 
 [Listado de DAST](https://owasp.org/www-community/Vulnerability_Scanning_Tools) por el OWASP
 
+???
+Abrir el listado y mostrar las diferentes herramientas, mencionar AppScan
+
 ---
 
-# Detección activa de vulnerabilidades (Vulnerability Detection)
+# Detección Activa De Vulnerabilidades (Vulnerability Detection)
 
 ## Ejemplo
 
@@ -233,11 +240,14 @@ Se puede automatizar cómo lost SAST
 
 ---
 
-# Detección activa de vulnerabilidades (Vulnerability Detection)
+# Detección Activa De Vulnerabilidades (Vulnerability Detection)
 
 ## Pen-Testing
 
-Son herramientas útiles pero dependen de la aplicación. 
+Los DAST Son herramientas útiles pero dependen de la aplicación.
+
+???
+Es Decir, la aplicación puede ser demasiado complicada o el DAST depende de algún framework.
 
 Para mejores resultados es más comun utilizar Penentration Testing (o Pen-Testing)
 
@@ -249,7 +259,7 @@ Personal especializado en explotación de vulnerabilidades. En otras palabras, h
 
 ---
 
-# Detección activa de vulnerabilidades (Vulnerability Detection)
+# Detección Activa De Vulnerabilidades (Vulnerability Detection)
 
 ## Web Application Firewalls (WAF)
 
@@ -259,6 +269,10 @@ Personal especializado en explotación de vulnerabilidades. En otras palabras, h
 --
 
 OWASP!
+
+--
+
+🐝
 
 ---
 
@@ -280,7 +294,7 @@ https://docs.microsoft.com/en-us/azure/web-application-firewall/ag/application-g
 
 ---
 
-# Protección en la cadena de suministros (Software Supply Chain Security)
+# Protección En La Cadena De Suministros (Software Supply Chain Security)
 
 - Asegurar los paquetes que se utilizan al crear y desplegar aplicaciones
 
@@ -354,7 +368,7 @@ Prevención > Corrección.
 
 --
 
-Una de las metodologías mas comunes es Threat Modeling (Modelo de amenazas)
+Una de las metodologías mas comunes es Threat Modeling (Modelo De Amenazas)
 
 --
 
@@ -391,7 +405,7 @@ Tomado de [A Guide to Threat Modelling for Developers](https://martinfowler.com/
 ---
 
 
-# Cultura laboral
+# Cultura Laboral
 
 Existen varias metodologías y procesos adicionales tales cómo
 

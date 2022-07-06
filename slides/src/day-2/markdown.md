@@ -6,13 +6,43 @@ class: center, middle
 
 ---
 
+# El Instructor
+
+- Oscar Eduardo Barrios Varela
+
+--
+
+- Egresado de la Escuela en 2012 del programa de Ingeniería de sistemas
+
+--
+
+- Maestría en la RWTH Aachen en Ingeniería de Software 2016
+
+--
+
+- Trabajado para Microsoft, IBM, Klarna
+
+--
+
+- 8 años de experiencia en desarrollo seguro de software
+
+--
+
+- Me gustan los videojueguitos
+
+--
+
+🕹️🎮
+
+---
+
 # Agenda
 
 1. Análisis Estático De Código Fuente (Static Analysis)
 2. Cumplimiento De Normativas De Seguridad (Security Compliance Checks)
 3. Detección Activa De Vulnerabilidades (Vulnerability Detection)
 4. Protección En La Cadena De Suministros (Software Supply Chain Security)
-5. Secure Development (Desarrollo Seguro) + Threat Modeling (Modelo De Amenazas)
+5. Desarrollo Seguro (Secure Development) + Modelo De Amenazas (Threat Modeling)
 6. Cultura Laboral
 
 ---

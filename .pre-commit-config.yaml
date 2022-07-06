@@ -1,3 +1,4 @@
+repos:
 -   repo: local
     hooks:
     #Use dotnet format already installed on your machine

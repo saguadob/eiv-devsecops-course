@@ -13,7 +13,7 @@ services:
         - NODE_VERSION=16
         - UPGRADE_PACKAGES=true
     volumes:
-      - /var/run/docker.sock:/var/run/docker-host.sock:bind
+      #- /var/run/docker.sock:/var/run/docker-host.sock:bind
       # Mount the root folder that contains .git
       - .:/workspace:cached
     env_file:
@@ -37,7 +37,7 @@ services:
         - VARIANT=3.1-bullseye
         - NODE_VERSION=lts/*
     volumes:
-      - /var/run/docker.sock:/var/run/docker-host.sock:bind
+      #- /var/run/docker.sock:/var/run/docker-host.sock:bind
       # Mount the root folder that contains .git
       - .:/workspace:cached
     # Overrides default command so things don't shut down after the process ends.

@@ -368,7 +368,7 @@ DEV
 # 15 min (3h 10m)
 - Explicar lo que hace un agente
 - Porque es bueno mucho y no poco
-----
+---
 .left-column[
 DEV
 ]
@@ -381,7 +381,6 @@ DEV
   - Genera discusión
 - Combinación con _guardas_
 ]
-
 ???
 # 10 minutos (3h 20m)
 - Ejemplos de guardas

@@ -1,0 +1,8 @@
+-   repo: local
+    hooks:
+    #Use dotnet format already installed on your machine
+    -   id: dotnet-format
+        name: dotnet-format
+        language: system 
+        entry: dotnet format --include src
+        types_or: ["c#", "vb"]

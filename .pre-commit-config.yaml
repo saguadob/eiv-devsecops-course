@@ -4,5 +4,5 @@
     -   id: dotnet-format
         name: dotnet-format
         language: system 
-        entry: dotnet format --include app/src
+        entry: dotnet format -f app/src
         types_or: ["c#", "vb"]

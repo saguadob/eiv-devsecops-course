@@ -6,13 +6,43 @@ class: center, middle
 
 ---
 
+# El Instructor
+
+- Oscar Eduardo Barrios Varela
+
+--
+
+- Egresado de la Escuela en 2012 del programa de Ingeniería de sistemas
+
+--
+
+- Maestría en la RWTH Aachen en Ingeniería de Software 2016
+
+--
+
+- Trabajado para Microsoft, IBM, Klarna
+
+--
+
+- 8 años de experiencia en desarrollo seguro de software
+
+--
+
+- Me gustan los videojueguitos
+
+--
+
+🕹️🎮
+
+---
+
 # Agenda
 
 1. Análisis Estático De Código Fuente (Static Analysis)
 2. Cumplimiento De Normativas De Seguridad (Security Compliance Checks)
 3. Detección Activa De Vulnerabilidades (Vulnerability Detection)
 4. Protección En La Cadena De Suministros (Software Supply Chain Security)
-5. Secure Development (Desarrollo Seguro) + Threat Modeling (Modelo De Amenazas)
+5. Desarrollo Seguro (Secure Development) + Modelo De Amenazas (Threat Modeling)
 6. Cultura Laboral
 
 ---
@@ -300,11 +330,11 @@ https://docs.microsoft.com/en-us/azure/web-application-firewall/ag/application-g
 
 --
 
-- Se trata de asegurar que el código usado por nuestra aplicación (SDK, paquetes, herramients, contenedores) esté también protegido.
+- Se trata de asegurar que el código usado por nuestra aplicación (SDK, paquetes, herramientas, contenedores) estén también protegidos.
 
 --
 
-- Para ello se usa una multitud de herramientas que recolectan datos y analizan los repositorios, herramientas y demás.
+- Para ello se usa una multitud de aplicaciones que recolectan datos y analizan los repositorios, herrapientas de automatizacón, despliegue, soporte y demás.
 
 ---
 
@@ -317,6 +347,9 @@ https://docs.microsoft.com/en-us/azure/web-application-firewall/ag/application-g
     </div>
     <img style = "flex: 1 1 0; width: 80%" src = "../img/2022-06-30_Snyk.jpg">
 </div>
+
+???
+Snyk analiza cada parte del proyecto según se configure, por ejemplo, analiza los archivos de descripción de los contenedores, `package.json` en repositorios JavaScrip/NodeJS y otros archivos de manifiestos para buscar paquetes que puedan estar comprometidos. Luego sugiere recomendaciones para solucionar o aliviar las vulnerabilidades.
 
 ---
 
@@ -411,7 +444,7 @@ Existen varias metodologías y procesos adicionales tales cómo
 
 --
 
-- Asignar expertos en seguridad durante incepción, diseño y arquitectura de los sistemas
+- Asignar expertos en seguridad durante incepción, diseño y arquitectura de los sistemas (cómo el acá presente instructor)
 
 --
 

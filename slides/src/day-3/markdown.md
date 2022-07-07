@@ -10,18 +10,18 @@ class: center, middle
 
 ---
 .left-column[
-# Test
+Test
 ]
 .right-column[
+# Automated Testing
+
 - Objetivo final push on Green ✅
 - Las pruebas corren en su propio entorno
   - Evitan el dilema de _funciona en mi PC_
-  - Primer acercamiento a mepquetar de manera distibuible
+  - Primer acercamiento a empaquetar de manera distibuible
 
-![:scale 100%](../img/dia3_pipeline_test.png)
-
+![:scale 90%](../img/dia3_pipeline_test.png)
 ]
-
 ???
 # ? minutos
 - Combinación
@@ -29,24 +29,23 @@ class: center, middle
 - [ ] poner al final del dia dos infrastructura como codigo y capitulo 9 del libro
 ---
 .left-column[
-# Feedback
+Feedback
 ]
 .right-column[
-## Pipeline
+# Pipeline
 - Base estructural en el las prácticas DevSecOps
 - Consiste de multiples y herramientas y servicios
-![:scale 100](../img/dia3_pipeline_complejo.png)
 - Factores de éxito de un pipeline
-  - Alto grado de automarización
+  - Alto grado de automatización
   - Alto grado de visibilidad de los errores
-- Releja el ciclo Devops
+- Refleja el ciclo Devops
 ]
-
+![:scale 90%](../img/dia3_pipeline_complejo.png)
 ???
 # 10 min
 ---
 .left-column[
-# Feedbacl
+Feedback
 ]
 .right-column[
 ## Continuous integration
@@ -57,22 +56,23 @@ class: center, middle
 - Si falla, para todo el proceso de desarrollo
 - Recodatorio: trabajar en pequeñas tareas
 ]
-
 ???
 # 5 min
 - Mencionar que si un cambio es grande, es más desafiante saber que es lo que rompe CI.
 ---
 .left-column[
-# Feedback
+Feedback
 ]
 .right-column[
-## Test suites
+#Test suites
 - Unit test
 - Acceptance test
 - Interation test
 - Code Coverage
+
 _Recomendación_: Pensar en paralelismo
-### Ideas complementarias
+
+## Ideas complementarias
 - Atrapar errores lo más pronto posible
 - Mucho automático, poco manual
 - Test Driven Development
@@ -90,17 +90,17 @@ _Recomendación_: Pensar en paralelismo
 - `no-funcional` probar dependencias a bibliotecas, OS, etc.
 ---
 .left-column[
-# Feedback
+Feedback
 ]
 .right-column[
-## Halar la cuerda (_pull the anon cord_)
-.center[![:scale 100](../img/dia3_cuerda.png)]
+# Halar la cuerda (_pull the anon cord_)
+.center[![:scale 75%](../img/dia3_cuerda.png)]
 - ✅ `estado verde` tienen que ser confiable
 - ❌ `estado rojo` tiene que desaparecer para continuar
   - Devolver / Revertir
   - Arreglar
 - No se puede contribuir hasta que vuelva ✅
-- Requiere visbilidad
+- Requiere visibilidad
 ]
 
 ???
@@ -109,7 +109,7 @@ _Recomendación_: Pensar en paralelismo
 - Mostrar / hablar ejemplos de visibilidad
 ---
 .left-column[
-# Feeback
+Feeback
 ]
 .right-column[
 ## La práctica de CI
@@ -125,7 +125,7 @@ Ejemplo en [grupo](https://learning.oreilly.com/library/view/the-devops-handbook
 ???
 # 10 min
 - Explicar ejemplo de tareas pequeñas
-- Expliar que pasa con la baja frecuencia
+- Explicar que pasa con la baja frecuencia
 ---
 .left-column[
 # Feedback
@@ -278,27 +278,30 @@ Aplicaciones
 - Actividad en grupo pensemos como hacer un dark launch.
 ---
 .left-column[
-# Release
+Release
 ]
 .right-column[
 ## CD vs CD  (?)
 _Continuous Deployment vs Continuous Delivery_
 > _Continuous Delivery_ es el prerrequisito de _Continuous Deployment_
+
 ### Continuous Delivery
 Requiere:
 - Pequeños trozos de código continuos
 - _Trunk_ es estable
 - Se puede lanzar cuando se desee
 - __Clave__: Tener confianza de que se puede hacer
+
 ### Continuous Deployment
 Requiere:
 - Artefactos _buenos_
 - Despiegues regulares
 - Alto grado de automatización
 - __Clave__: Quien despliega minimiza el riesgo de error
-]
+---
 Cita textual: 
 > Defined this way, continuous delivery is the prerequisite for continuous deployment—just as continuous integration is a prerequisite for continuous delivery. Continuous deployment is likely applicable in the context of web services that are delivered online. However, continuous delivery is applicable in almost every context where we desire deployments and releases that have high quality, fast lead times and have highly predictable, low-risk outcomes, including for embedded systems, COTS products, and mobile apps.
+]
 ???
 # 15 min
 - Esta dipositiva habla de low risk enablement

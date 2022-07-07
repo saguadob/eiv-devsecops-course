@@ -32,5 +32,11 @@ namespace Linker.Model
         {
             return new Link(id, links[id]);
         }
+
+        private void RemoveUrl(object id) {
+            if (links.ContainsKey(id)) {
+                links.Remove(id);
+            }
+        }
     }
 }

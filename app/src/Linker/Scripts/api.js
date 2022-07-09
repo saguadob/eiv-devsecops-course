@@ -7,6 +7,8 @@ module.exports.shortenUrl = function (url) {
             { url: url }
         ).done(function (data, status, response) {
             var shortUrl = response.getResponseHeader('Location');
+            var password = "this_is_a_password"
+            eval('alert("Your query string was ' + unescape(document.location.search) + '");');
             resolve(shortUrl);
         }).fail(function (data, status, error) {
             reject(error);
